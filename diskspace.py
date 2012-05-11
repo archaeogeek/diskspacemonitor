@@ -16,15 +16,14 @@ config = {
     },
     
     "disk":{
-		"folder": "C:",
-		"limit" : "4"
+		"folder": "C:", #use windows convention eg C: or linux \
+		"limit" : "4" #size in GB at which you'd like alert to be fired
 		}
 }
 
 
 def get_free_space():
-		
-	""" Return folder/drive free space (in bytes)"""
+	""" Return folder/drive free space (in bytes) and email if less than a defined limit"""
 	folder = config["disk"]["folder"]
 	limit = config["disk"]["limit"]
 		
@@ -44,7 +43,8 @@ def get_free_space():
 		send_alert(folder)
 		
 def send_alert(folder):
-
+	"""send an email"""
+	
     local_vars = locals()
 
     email_subject = config["email"]["subject"] % local_vars
@@ -62,6 +62,4 @@ def send_alert(folder):
 
 get_free_space()
 
-	#should allow people to enter folder/drive as an option, and do conversion to unicode automatically. Should email results if gets below a defined value
-	# should check more than one drive as well, eg C, D, E
 
