@@ -6,12 +6,12 @@ import smtplib
 
 config = {
     "email": {
-        "from": "jocook@astuntechnology.com",
-        "to": ["jocook@astuntechnology.com"],
+        "from": "add your email here",
+        "to": ["add another email here"],
         "subject": "Disk Space Monitor: %(folder)s",
         "message": "The drive %(folder)s is reaching its space limit. \n\nThe Monitoring Pixie.",
-        "username": "jocook@astuntechnology.com",
-        "password": "jwh30Astun",
+        "username": "your astun email",
+        "password": "your astun email password",
         "smtp_server": "smtp.gmail.com:587"
     },
     
