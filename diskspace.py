@@ -6,13 +6,13 @@ import smtplib
 
 config = {
     "email": {
-        "from": "add your email here",
-        "to": ["add another email here"],
+        "from": "add sender email here",
+        "to": "add recipient email here",
         "subject": "Disk Space Monitor: %(folder)s",
-        "message": "The drive %(folder)s is reaching its space limit. \n\nThe Monitoring Pixie.",
-        "username": "your astun email",
-        "password": "your astun email password",
-        "smtp_server": "smtp.gmail.com:587"
+        "message": "The drive %(folder)s is reaching its space limit. \n\nFrom the DiskSpace Pixie.",
+        "username": "your email address",
+        "password": "your email password",
+        "smtp_server": "your smtp server"
     },
     
     "disk":{
